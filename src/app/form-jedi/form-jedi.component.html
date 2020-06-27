@@ -1,0 +1,52 @@
+<form [formGroup]="formularioCadastro" (ngSubmit)="onSubmit()">
+
+  <div>
+    <label for="nome">Nome:</label>
+    <input id="nome" name="nome" type="text" formControlName="nome">
+  </div>
+
+  <div>
+    <label for="classificacao">Classificação:</label>
+    <select id="classificacao" name="classificacao" formControlName="classificacao">
+      <option value="Jedi Iniciado">Jedi Iniciado</option>
+      <option value="Jedi Padawan">Jedi Padawan</option>
+      <option value="Cavaleiro Jedi">Cavaleiro Jedi</option>
+      <option value="Mestre Jedi">Mestre Jedi</option>
+      <option value="Grande Mestre">Grande Mestre</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="classe">Classe:</label>
+    <select id="classe" name="classe" formControlName="classe">
+      <option value="Jedi Guardião">Jedi Guardião</option>
+      <option value="Jedi Consular">Jedi Consular</option>
+      <option value="Jedi Sentinela">Jedi Sentinela</option>
+
+    </select>
+  </div>
+
+  <div>
+    <label for="corDoSabre">Cor do Sabre:</label>
+    <select id="corDoSabre" name="corDoSabre" formControlName="corDoSabre">
+      <option value="Azul">Azul</option>
+      <option value="Verde">Verde</option>
+      <option value="Roxo">Roxo</option>
+      <option value="Laranja">Laranja</option>
+      <option value="Lilás">Lilás</option>
+      <option value="Preto">Preto</option>
+      <option value="Branco">Branco</option>
+      <option value="Amarelo">Amarelo</option>
+      <option value="Vermelho">Vermelho</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="idade">Idade:</label>
+    <input id="idade" name="idade" type="number" min="1" formControlName="idade">
+  </div>
+
+  <div>
+    <button type="submit" [disabled]="formularioCadastro.invalid">Cadastrar</button>
+  </div>
+</form>
